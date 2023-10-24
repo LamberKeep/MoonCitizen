@@ -1,0 +1,14 @@
+# Set the locale for all messages.
+# If you don't set this, the default locale of the server will be used.
+# For example, to set language to English, set locale to en, to use the file "messages_en.properties".
+locale: en
+
+# Will automatically save the list of NPCs after stopping or restarting the server.
+# Otherwise, saving NPCs will be available only by using the `/mooncitizen save` command.
+auto-save: true
+
+# Cooldown between player-NPC interactions (in ticks).
+cooldown: 20
+
+# NPC render distance range (in blocks).
+render-distance: 30

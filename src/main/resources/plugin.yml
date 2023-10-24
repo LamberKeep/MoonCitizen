@@ -1,0 +1,36 @@
+main: io.github.moonserverproject.mooncitizen.MoonCitizen
+name: MoonCitizen
+api-version: '1.20'
+version: '${project.version}'
+description: Is Paper plugin working on latest versions on Minecraft and allows to create NPCs on your server by using ProtocolLib
+load: POSTWORLD
+author: LamberKeep
+prefix: MC
+depend:
+  - ProtocolLib
+commands:
+  npc:
+    description: Control NPC
+    permission: mooncitizen.npc
+    permission-message: "You have no permission"
+    usage: "Usage: /npc [id] [info|create|remove|move|name|type|invisible|follow|action] [params]"
+  mooncitizen:
+    description: Plugin command
+    aliases:
+      - mc
+    permission: mooncitizen.plugin
+    permission-message: "You have no permission"
+    usage: "Usage: /mooncitizen [save|reload]"
+permissions:
+  mooncitizen.npc:
+    description: Allows you to control NPCs
+    default: false
+  mooncitizen.plugin:
+    description: Allows to control the configuration file
+    default: false
+  mooncitizen.*:
+    description: Allows to control plugin
+    default: op
+    children:
+      - mooncitizen.npc
+      - mooncitizen.plugin
